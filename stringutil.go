@@ -8,3 +8,14 @@ func Reverse(s string) string {
 	}
 	return string(r)
 }
+
+// CountSymbols counts the number of symbols (non-space and non-digit characters) in a string.
+func CountSymbols(s string) int {
+    count := 0
+    for _, char := range s {
+        if (char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z') || (char >= 0x80) {
+            count++
+        }
+    }
+    return count
+}
